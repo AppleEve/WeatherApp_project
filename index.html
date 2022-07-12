@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0" />
+    <title>☀️ Weather forecast ☀️</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Finlandica&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2314c33b20.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Nicosia, CY</h1>
+      <div class="row">
+        <div class="col-6">
+          <h2><span id = "big-nbr">34</span><a href="#" id = "initial-scale">&#176;C</a> <span class="dash" id="main-dash">&#124;</span> <a href="#" id ="other-scale">&#176;F</a></h2>
+        </div>
+        <div class="col-6">
+          <p>
+            <span class="dash">Precipitation:</span
+            ><span class="value"> 0%</span>
+            <br />
+            <span class="dash">Humidity:</span><span class="value" id="humidity-value"> 25%</span>
+            <br />
+            <span class="dash">Wind:</span><span class="value" id="wind-value"> 11 mps</span>
+          </p>
+        </div>
+        <div class="col-6 main-image">
+          <i class="fa-solid fa-sun"></i>
+        </div>
+
+        <div class="col">
+          <span class="dash">Weather for:</span
+          ><span class="value" id= "current-date-time"> 05/07/2022 15:21</span>
+        </div>
+      </div>
+
+      <hr />
+      <div class="row">
+        <div class="col-3 dash" id="next-day-1">Tomorrow</div>
+        <div class="col-3 dash" id="next-day-2">Monday</div>
+        <div class="col-3 dash" id="next-day-3">Tuesday</div>
+        <div class="col-3 dash" id="next-day-4">Wednesday</div>
+        <div class="col-3 image"><i class="fa-solid fa-cloud-sun"></i></div>
+        <div class="col-3 image">
+          <i class="fa-solid fa-cloud-sun-rain"></i>
+        </div>
+        <div class="col-3 image"><i class="fa-solid fa-sun"></i></div>
+        <div class="col-3 image"><i class="fa-solid fa-sun"></i></div>
+        <div class="col-3 value">
+          37&#176;C <span class="dash">&#124;</span> 98&#176;F
+        </div>
+        <div class="col-3 value">
+          40&#176;C <span class="dash">&#124;</span> 104&#176;F
+        </div>
+        <div class="col-3 value">
+          31&#176;C <span class="dash">&#124;</span> 88&#176;F
+        </div>
+        <div class="col-3 value">
+          34&#176;C <span class="dash">&#124;</span> 94&#176;F
+        </div>
+      </div>
+
+      <br />
+      <hr />
+      <button>
+        Check weather for your location
+      </button>
+      <div id="or">or</div>
+      <form>
+        <input class= "text" type= "text" placeholder="Type the name of the city"/>
+        <input class="submit" type= "submit" value= "Change city" />
+     <script src="src/index.js"></script>
+  </body>
+</html>
