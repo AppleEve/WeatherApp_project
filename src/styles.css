@@ -103,3 +103,8 @@ hr {
   text-align: center;
   font-size: 12px;
 }
+
+.open-source {
+  font-size: 10px;
+  color: rgb(252, 250, 250);
+}
