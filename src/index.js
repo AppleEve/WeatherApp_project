@@ -59,7 +59,8 @@ function showSelectedTemperature(response) {
   windValue.innerHTML = ` ${wind} mps`;
 }
 
-function setLocation() {
+function setLocation(event) {
+  event.preventDefault();
   let apiKey = "711bf416fd4b68649d4f2e89cc233151";
   let text = document.querySelector(".text");
   let selectedCity = text.value;
