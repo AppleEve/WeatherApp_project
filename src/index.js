@@ -12,6 +12,7 @@ function showSelectedTemperature(response) {
   currentTemperature.innerHTML = `${currentWeather}`;
   humidityValue.innerHTML = ` ${humidity}%`;
   windValue.innerHTML = ` ${wind} km/h`;
+  celsiusTemperature = response.data.main.temp;
 }
 
 function setDefaultLocation() {
@@ -44,6 +45,7 @@ function showLocalTemperature(response) {
   currentTemperature.innerHTML = `${currentWeather}`;
   humidityValue.innerHTML = ` ${humidity}%`;
   windValue.innerHTML = ` ${wind} km/h`;
+  celsiusTemperature = response.data.main.temp;
 }
 
 function setCurrentLocation(position) {
@@ -56,6 +58,18 @@ function setCurrentLocation(position) {
 
 function getWeatherForCurrentLocation() {
   navigator.geolocation.getCurrentPosition(setCurrentLocation);
+}
+
+function convertCtoF(event) {
+  event.preventDefault();
+  let temperatureInC = document.querySelector("#big-nbr");
+  temperatureInC.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
+}
+
+function convertFtoC(event) {
+  event.preventDefault();
+  let temperatureInC = document.querySelector("#big-nbr");
+  temperatureInC.innerHTML = Math.round(celsiusTemperature);
 }
 
 let now = new Date();
@@ -104,5 +118,13 @@ form.addEventListener("submit", setLocation);
 
 let checkWeatherButton = document.querySelector("button");
 checkWeatherButton.addEventListener("click", getWeatherForCurrentLocation);
+
+let fButton = document.querySelector("#fahrenheit-scale");
+fButton.addEventListener("click", convertCtoF);
+
+let celsiusTemperature = null;
+
+let cButton = document.querySelector("#celsius-scale");
+cButton.addEventListener("click", convertFtoC);
 
 setDefaultLocation();

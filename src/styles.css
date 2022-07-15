@@ -24,28 +24,28 @@ h2 {
 #big-nbr {
   font-size: 64px;
 }
-#other-scale,
-#initial-scale,
+#fahrenheit-scale,
+#celsius-scale,
 #main-dash {
   position: relative;
   top: -22px;
 }
-#other-scale {
+#fahrenheit-scale {
   color: rgb(171, 214, 232);
   text-decoration: none;
 }
 
-#other-scale:hover {
+#fahrenheit-scale:hover {
   font-weight: 600;
   cursor: pointer;
   color: rgb(252, 250, 250);
 }
 
-#initial-scale {
+#celsius-scale {
   color: rgb(171, 214, 232);
   text-decoration: none;
 }
-#initial-scale:hover {
+#celsius-scale:hover {
   font-weight: 600;
   cursor: pointer;
   color: rgb(252, 250, 250);
