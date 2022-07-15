@@ -3,6 +3,7 @@ function showSelectedTemperature(response) {
   let currentTemperature = document.querySelector("#big-nbr");
   let humidityValue = document.querySelector("#humidity-value");
   let windValue = document.querySelector("#wind-value");
+  let weatherDescription = document.querySelector("#weather-description");
   let selectedCity = response.data.name;
   let selectedCountry = response.data.sys.country;
   let currentWeather = Math.round(response.data.main.temp);
@@ -13,6 +14,7 @@ function showSelectedTemperature(response) {
   humidityValue.innerHTML = ` ${humidity}%`;
   windValue.innerHTML = ` ${wind} km/h`;
   celsiusTemperature = response.data.main.temp;
+  weatherDescription.innerHTML = response.data.weather[0].description;
 }
 
 function setDefaultLocation() {
@@ -36,6 +38,7 @@ function showLocalTemperature(response) {
   let currentTemperature = document.querySelector("#big-nbr");
   let humidityValue = document.querySelector("#humidity-value");
   let windValue = document.querySelector("#wind-value");
+  let weatherDescription = document.querySelector("#weather-description");
   let currentCity = response.data.name;
   let currentCountry = response.data.sys.country;
   let currentWeather = Math.round(response.data.main.temp);
@@ -46,6 +49,7 @@ function showLocalTemperature(response) {
   humidityValue.innerHTML = ` ${humidity}%`;
   windValue.innerHTML = ` ${wind} km/h`;
   celsiusTemperature = response.data.main.temp;
+  weatherDescription.innerHTML = response.data.weather[0].description;
 }
 
 function setCurrentLocation(position) {
@@ -63,13 +67,25 @@ function getWeatherForCurrentLocation() {
 function convertCtoF(event) {
   event.preventDefault();
   let temperatureInC = document.querySelector("#big-nbr");
+  let fahrenheitScale = document.querySelector("#fahrenheit-scale");
+  let celsiusScale = document.querySelector("#celsius-scale");
   temperatureInC.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
+  fahrenheitScale.classList.remove("non-active-scale");
+  celsiusScale.classList.remove("active-scale");
+  fahrenheitScale.classList.add("active-scale");
+  celsiusScale.classList.add("non-active-scale");
 }
 
 function convertFtoC(event) {
   event.preventDefault();
   let temperatureInC = document.querySelector("#big-nbr");
+  let fahrenheitScale = document.querySelector("#fahrenheit-scale");
+  let celsiusScale = document.querySelector("#celsius-scale");
   temperatureInC.innerHTML = Math.round(celsiusTemperature);
+  fahrenheitScale.classList.remove("active-scale");
+  celsiusScale.classList.remove("non-active-scale");
+  fahrenheitScale.classList.add("non-active-scale");
+  celsiusScale.classList.add("active-scale");
 }
 
 let now = new Date();
