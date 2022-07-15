@@ -1,5 +1,6 @@
 body {
   font-family: "Montserrat", sans-serif;
+  margin-top: 30px;
 }
 .container {
   width: 80%;
@@ -69,39 +70,45 @@ h2 {
   padding-right: 12%;
 }
 .text {
-  margin: 5px auto;
   padding: 8px 20px;
   display: block;
-  border-radius: 15px;
-  border-color: rgb(252, 250, 250);
+  border-radius: 5px;
   font-size: 10px;
+  width: 350px;
+  background-color: rgb(238, 235, 225);
+  border-color: rgba(56, 92, 142);
 }
 button,
 .submit {
-  margin: 0 auto;
   padding: 8px 10px;
   display: block;
-  border-radius: 15px;
-  border-color: rgb(240, 215, 140);
-  color: rgb(79, 129, 199);
-  background-color: rgb(240, 215, 140);
+  border-radius: 5px;
+  color: white;
   transition: all 200ms ease;
   font-size: 10px;
+  background-color: rgba(56, 92, 142);
+  border-color: rgba(56, 92, 142);
+}
+.submit {
+  width: 100px;
+}
+button {
+  width: 200px;
 }
 button:hover,
 .submit:hover {
-  border-color: rgb(240, 215, 140);
-  color: rgb(79, 129, 199);
-  background-color: rgb(240, 215, 140);
-  font-size: 15px;
+  color: white;
+  font-size: 11px;
+  background-color: rgba(56, 92, 142);
+  border-color: rgba(56, 92, 142);
 }
 hr {
   color: rgb(168, 218, 220);
 }
-#or {
-  color: rgb(252, 250, 250);
-  text-align: center;
-  font-size: 12px;
+#label {
+  color: rgb(171, 214, 232);
+  font-size: 11px;
+  margin-top: 10px;
 }
 
 .open-source {

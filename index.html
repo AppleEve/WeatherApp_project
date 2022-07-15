@@ -29,13 +29,19 @@
       <h1></h1>
       <div class="row">
         <div class="col-6">
-          <h2><span id = "big-nbr"></span><a href="#" id = "initial-scale">&#176;C</a> <span class="dash" id="main-dash">&#124;</span> <a href="#" id ="other-scale">&#176;F</a></h2>
+          <h2>
+            <span id="big-nbr"></span><a href="#" id="initial-scale">&#176;C</a>
+            <span class="dash" id="main-dash">&#124;</span>
+            <a href="#" id="other-scale">&#176;F</a>
+          </h2>
         </div>
         <div class="col-6">
           <p>
-            <span class="dash">Humidity:</span><span class="value" id="humidity-value"></span>
+            <span class="dash">Humidity:</span
+            ><span class="value" id="humidity-value"></span>
             <br />
-            <span class="dash">Wind:</span><span class="value" id="wind-value"></span>
+            <span class="dash">Wind:</span
+            ><span class="value" id="wind-value"></span>
           </p>
         </div>
         <div class="col-6 main-image">
@@ -44,23 +50,43 @@
 
         <div class="col-6">
           <span class="dash">Weather for:</span
-          ><span class="value" id= "current-date-time"> 05/07/2022 15:21</span>
+          ><span class="value" id="current-date-time"> 05/07/2022 15:21</span>
         </div>
       </div>
 
-
       <br />
       <hr />
-      <button>
-        Check weather for your location
-      </button>
-      <div id="or">or</div>
+      
       <form>
-        <input class= "text" type= "text" placeholder="Type the name of the city"/>
-        <input class="submit" type= "submit" value= "Change city" />
-        </form>
-        <div class="open-source">
-        <a class= "open-source" href="https://github.com/AppleEve/WeatherApp_project">Open source code</a> by AppleEve</div>
-     <script src="src/index.js"></script>
+        <div class = "row">
+          <div class = "col -6">
+          <input
+            class="text"
+            type="text"
+            id="text"
+            placeholder="Type the name of the city"
+          /></div>
+          <div class = "col-2">
+          <input class="submit" type="submit" value="Select city" />
+          </div>
+          <div class = "col-4">
+        <button>Check weather for your location</button></div>
+        </div>
+      </form>
+      <p id="label">
+        You can select a city to see its current weather or check weather for your current location.
+      </p>
+  <hr />
+
+<br />
+    <div class="open-source">
+      <a
+        class="open-source"
+        href="https://github.com/AppleEve/WeatherApp_project"
+        >Open source code</a
+      >
+      by AppleEve
+    </div>
+    <script src="src/index.js"></script>
   </body>
 </html>

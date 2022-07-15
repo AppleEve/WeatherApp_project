@@ -43,7 +43,7 @@ function showLocalTemperature(response) {
   h1.innerHTML = `${currentCity}, ${currentCountry}`;
   currentTemperature.innerHTML = `${currentWeather}`;
   humidityValue.innerHTML = ` ${humidity}%`;
-  windValue.innerHTML = ` ${wind} mps`;
+  windValue.innerHTML = ` ${wind} km/h`;
 }
 
 function setCurrentLocation(position) {
