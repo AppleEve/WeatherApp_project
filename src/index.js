@@ -4,17 +4,23 @@ function showSelectedTemperature(response) {
   let humidityValue = document.querySelector("#humidity-value");
   let windValue = document.querySelector("#wind-value");
   let weatherDescription = document.querySelector("#weather-description");
+  let weatherIcon = document.querySelector("#main-image");
   let selectedCity = response.data.name;
   let selectedCountry = response.data.sys.country;
   let currentWeather = Math.round(response.data.main.temp);
   let humidity = response.data.main.humidity;
   let wind = Math.round(response.data.wind.speed);
+  let responceWeatherDescription = response.data.weather[0].description;
   h1.innerHTML = `${selectedCity}, ${selectedCountry}`;
   currentTemperature.innerHTML = `${currentWeather}`;
   humidityValue.innerHTML = ` ${humidity}%`;
   windValue.innerHTML = ` ${wind} km/h`;
   celsiusTemperature = response.data.main.temp;
-  weatherDescription.innerHTML = response.data.weather[0].description;
+  weatherDescription.innerHTML = responceWeatherDescription;
+  weatherIcon.setAttribute(
+    "src",
+    `${weatherIcons[`${responceWeatherDescription}`].day}`
+  );
 }
 
 function setDefaultLocation() {
@@ -39,17 +45,23 @@ function showLocalTemperature(response) {
   let humidityValue = document.querySelector("#humidity-value");
   let windValue = document.querySelector("#wind-value");
   let weatherDescription = document.querySelector("#weather-description");
+  let weatherIcon = document.querySelector("#main-image");
   let currentCity = response.data.name;
   let currentCountry = response.data.sys.country;
   let currentWeather = Math.round(response.data.main.temp);
   let humidity = response.data.main.humidity;
   let wind = Math.round(response.data.wind.speed);
+  let responceWeatherDescription = response.data.weather[0].description;
   h1.innerHTML = `${currentCity}, ${currentCountry}`;
   currentTemperature.innerHTML = `${currentWeather}`;
   humidityValue.innerHTML = ` ${humidity}%`;
   windValue.innerHTML = ` ${wind} km/h`;
   celsiusTemperature = response.data.main.temp;
-  weatherDescription.innerHTML = response.data.weather[0].description;
+  weatherDescription.innerHTML = responceWeatherDescription;
+  weatherIcon.setAttribute(
+    "src",
+    `${weatherIcons[`${responceWeatherDescription}`].day}`
+  );
 }
 
 function setCurrentLocation(position) {
@@ -87,6 +99,30 @@ function convertFtoC(event) {
   fahrenheitScale.classList.add("non-active-scale");
   celsiusScale.classList.add("active-scale");
 }
+
+let weatherIcons = {
+  "clear sky": { day: "img/clear-day.svg", night: "img/clear-night.svg" },
+  "few clouds": {
+    day: "img/partly-cloudy-day.svg",
+    night: "img/partly-cloudy-night.svg",
+  },
+  "scattered clouds": { day: "img/cloudy.svg", night: "img/cloudy.svg" },
+  "broken clouds": {
+    day: "img/overcast-day.svg",
+    night: "img/overcast-night.svg",
+  },
+  "shower rain": { day: "img/clear-day.svg", night: "img/clear-night.svg" },
+  rain: {
+    day: "img/partly-cloudy-rain-day.svg",
+    night: "img/partly-cloudy-rain-night.svg",
+  },
+  thunderstorm: {
+    day: "img/thunderstorms.svg",
+    night: "img/thunderstorms.svg",
+  },
+  snow: { day: "img/snow.svg", night: "img/partly-cloudy-snow-night.svg" },
+  mist: { day: "img/fog.svg", night: "img/fog.svg" },
+};
 
 let now = new Date();
 let minutes = now.getMinutes();
