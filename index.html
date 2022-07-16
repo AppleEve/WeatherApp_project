@@ -27,22 +27,25 @@
   <body>
     <div class="container">
       <h1></h1>
-          <div class="col-12 current-date">
-          <span class="parameter">Weather for:</span
-          ><span class="value" id="current-date-time"> 05/07/2022 15:21</span>
-        </div>
+      <div class="col-12 current-date">
+        <span class="parameter">Weather for:</span
+        ><span class="value" id="current-date-time"> 05/07/2022 15:21</span>
+      </div>
       <div class="row">
-        <div class="col-3 main-image" >
+        <div class="col-3 main-image">
           <img id="main-image" src="img/cloudy.svg" />
         </div>
         <div class="col-4">
           <h2>
-            <span id="big-nbr"></span><a href="#" class="active-scale" id="celsius-scale">&#176;C</a>
+            <span id="big-nbr"></span
+            ><a href="#" class="active-scale" id="celsius-scale">&#176;C</a>
             <span class="dash" id="main-dash">&#124;</span>
-            <a href="#" class = "non-active-scale" id="fahrenheit-scale">&#176;F</a>
+            <a href="#" class="non-active-scale" id="fahrenheit-scale"
+              >&#176;F</a
+            >
           </h2>
-        </div> 
-        
+        </div>
+
         <div class="col-3">
           <p class="weather-properties">
             <span class="parameter">Weather: </span
@@ -54,39 +57,93 @@
             <span class="parameter">Wind:</span
             ><span class="value" id="wind-value"></span>
           </p>
-        </div> 
-       
-        
-       
-
-
+        </div>
       </div>
-
       <br />
       <hr />
-      
-      <form>
-        <div class = "row">
-          <div class = "col -6">
+      <div class="row">
+        <div class="col-2 day-one">
+          <div class="forecast-day">Tuesday</div>
+          <img class="forecast-images" src="img/clear-day.svg" />
+          <div class="forecast-temperatures">
+            <span class="forecast-temperature-max">18&#176;C</span
+            ><span class="forecast-dash"> &#124; </span>
+            <span class="forecast-temperature-min">12&#176;C</span>
+          </div>
+        </div>
+      <div class="col-2 day-one">
+        <div class="forecast-day">Wednesday</div>
+        <img class="forecast-images" src="img/clear-day.svg" />
+        <div class="forecast-temperatures">
+          <span class="forecast-temperature-max">18&#176;C</span
+          ><span class="forecast-dash"> &#124; </span>
+          <span class="forecast-temperature-min">12&#176;C</span>
+        </div>
+      </div>
+      <div class="col-2 day-one">
+        <div class="forecast-day">Thursday</div>
+        <img class="forecast-images" src="img/clear-day.svg" />
+        <div class="forecast-temperatures">
+          <span class="forecast-temperature-max">18&#176;C</span
+          ><span class="forecast-dash"> &#124; </span>
+          <span class="forecast-temperature-min">12&#176;C</span>
+        </div>
+      </div>
+      <div class="col-2 day-one">
+        <div class="forecast-day">Friday</div>
+        <img class="forecast-images" src="img/clear-day.svg" />
+        <div class="forecast-temperatures">
+          <span class="forecast-temperature-max">18&#176;C</span
+          ><span class="forecast-dash"> &#124; </span>
+          <span class="forecast-temperature-min">12&#176;C</span>
+        </div>
+      </div>
+      <div class="col-2 day-one">
+        <div class="forecast-day">Saturday</div>
+        <img class="forecast-images" src="img/clear-day.svg" />
+        <div class="forecast-temperatures">
+          <span class="forecast-temperature-max">18&#176;C</span
+          ><span class="forecast-dash"> &#124; </span>
+          <span class="forecast-temperature-min">12&#176;C</span>
+        </div>
+      </div>
+      <div class="col-2 day-one">
+        <div class="forecast-day">Sunday</div>
+        <img class="forecast-images" src="img/clear-day.svg" />
+        <div class="forecast-temperatures">
+          <span class="forecast-temperature-max">18&#176;C</span
+          ><span class="forecast-dash"> &#124; </span>
+          <span class="forecast-temperature-min">12&#176;C</span>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+    <form>
+      <div class="row">
+        <div class="col -6">
           <input
             class="text"
             type="text"
             id="text"
             placeholder="Type the name of the city"
-          /></div>
-          <div class = "col-2">
-          <input class="submit" type="submit" value="Select city" />
-          </div>
-          <div class = "col-4">
-        <button>🌤️ Check weather for your location</button></div>
+          />
         </div>
-      </form>
-      <p id="label">
-        You can select a city to see its current weather or check weather for your current location.
-      </p>
-  <hr />
+        <div class="col-2">
+          <input class="submit" type="submit" value="Select city" />
+        </div>
+        <div class="col-4">
+          <button>🌤️ Check weather for your location</button>
+        </div>
+      </div>
+    </form>
+    <p id="label">
+      You can select a city to see its current weather or check weather for your
+      current location.
+    </p>
+    <hr />
 
-<br />
+    <br />
     <div class="open-source">
       <a
         class="open-source"
