@@ -3,7 +3,7 @@ body {
   margin-top: 30px;
 }
 .container {
-  max-width: 900px;
+  max-width: 75%;
   background-color: rgb(79, 129, 199);
   padding: 30px;
   border-radius: 10px;
@@ -15,20 +15,20 @@ body {
 h1 {
   font-weight: 600;
   color: rgb(252, 250, 250);
-  font-size: 55px;
+  font-size: 60px;
 }
 h2 {
   color: rgb(171, 214, 232);
 }
 
 #big-nbr {
-  font-size: 70px;
+  font-size: 90px;
 }
 #fahrenheit-scale,
 #celsius-scale,
 #main-dash {
   position: relative;
-  top: -22px;
+  top: -42px;
 }
 
 #fahrenheit-scale:hover,
@@ -53,22 +53,21 @@ h2 {
 }
 .value {
   color: rgb(171, 214, 232);
+  font-size: 20px;
 }
 .main-image {
   background-size: auto;
 }
 .image {
-  color: rgb(240, 215, 140);
   text-align: center;
-  font-size: 30px;
   padding-right: 12%;
 }
 .text {
   padding: 8px 20px;
   display: block;
   border-radius: 5px;
-  font-size: 10px;
-  width: 405px;
+  font-size: 13px;
+  width: 100%;
   background-color: rgb(238, 235, 225);
   border-color: rgba(56, 92, 142);
 }
@@ -79,20 +78,20 @@ button,
   border-radius: 5px;
   color: white;
   transition: all 200ms ease;
-  font-size: 10px;
+  font-size: 14px;
   background-color: rgba(56, 92, 142);
   border-color: rgba(56, 92, 142);
 }
 .submit {
-  width: 100px;
+  width: 60%;
 }
 button {
-  width: 200px;
+  width: 80%;
 }
 button:hover,
 .submit:hover {
   color: white;
-  font-size: 11px;
+  font-size: 15px;
   background-color: rgba(56, 92, 142);
   border-color: rgba(56, 92, 142);
 }
@@ -108,6 +107,7 @@ hr {
 .parameter {
   font-weight: 600;
   color: white;
+  font-size: 20px;
 }
 
 .open-source {
@@ -122,4 +122,9 @@ hr {
 .current-date {
   margin-bottom: 40px;
   font-size: 12px;
+}
+
+.weather-properties {
+  position: relative;
+  top: 16px;
 }
