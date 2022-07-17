@@ -100,6 +100,34 @@ function convertFtoC(event) {
   celsiusScale.classList.add("active-scale");
 }
 
+function displayForecast() {
+  let dailyForecast = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let forecastDays = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  forecastDays.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+            <div class="forecast-day">${day}</div>
+            <img class="forecast-images" src="img/clear-day.svg" />
+            <div class="forecast-temperatures">
+              <span class="forecast-temperature-max">18&#176;C</span
+              ><span class="forecast-dash"> &#124; </span>
+              <span class="forecast-temperature-min">12&#176;C</span>
+            </div>
+          </div>`;
+  });
+  forecastHTML = forecastHTML + "</div>";
+  dailyForecast.innerHTML = forecastHTML;
+}
+
 let weatherIcons = {
   "clear sky": { day: "img/clear-day.svg", night: "img/clear-night.svg" },
   "few clouds": {
@@ -180,3 +208,4 @@ let cButton = document.querySelector("#celsius-scale");
 cButton.addEventListener("click", convertFtoC);
 
 setDefaultLocation();
+displayForecast();

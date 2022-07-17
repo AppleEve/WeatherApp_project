@@ -146,3 +146,7 @@ hr {
 .forecast-temperature-min {
   color: rgb(171, 214, 232, 0.5);
 }
+
+#forecast {
+  margin: 30px;
+}
