@@ -58,14 +58,9 @@ function getWeatherForCurrentLocation() {
 
 function convertCtoF(event) {
   event.preventDefault();
-  let temperatureInC = document.querySelector("#big-nbr");
-  let fahrenheitScale = document.querySelector("#fahrenheit-scale");
-  let celsiusScale = document.querySelector("#celsius-scale");
-  temperatureInC.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
-  fahrenheitScale.classList.remove("non-active-scale");
-  celsiusScale.classList.remove("active-scale");
-  fahrenheitScale.classList.add("active-scale");
-  celsiusScale.classList.add("non-active-scale");
+  alert(
+    "Unfortunatelly our App does not provide the possibility to change the scale to Fahrenheit just yet 🌡️. We are working on it! 🤔"
+  );
 }
 
 function convertFtoC(event) {
@@ -113,11 +108,11 @@ function displayForecast(response) {
               forecastDay.weather[0].icon
             }.svg"  />
             <div class="forecast-temperatures">
-              <span class="forecast-temperature-max">${Math.round(
+              <span class="forecast-temperature-max" id="temp-max">${Math.round(
                 forecastDay.temp.max
               )}&#176;C</span
               ><span class="forecast-dash"> &#124; </span>
-              <span class="forecast-temperature-min">${Math.round(
+              <span class="forecast-temperature-min" id="temp-min">${Math.round(
                 forecastDay.temp.min
               )}&#176;C</span>
             </div>

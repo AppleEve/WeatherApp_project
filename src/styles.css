@@ -77,12 +77,12 @@ button,
   border-radius: 5px;
   color: white;
   transition: all 200ms ease;
-  font-size: 13px;
+  font-size: 12px;
   background-color: rgba(56, 92, 142);
   border-color: rgba(56, 92, 142);
 }
 .submit {
-  width: 60%;
+  width: 65%;
 }
 button {
   width: 80%;
@@ -90,7 +90,7 @@ button {
 button:hover,
 .submit:hover {
   color: white;
-  font-size: 15px;
+  font-size: 13px;
   background-color: rgba(56, 92, 142);
   border-color: rgba(56, 92, 142);
 }
