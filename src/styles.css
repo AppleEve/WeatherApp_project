@@ -77,7 +77,7 @@ button,
   border-radius: 5px;
   color: white;
   transition: all 200ms ease;
-  font-size: 14px;
+  font-size: 13px;
   background-color: rgba(56, 92, 142);
   border-color: rgba(56, 92, 142);
 }
@@ -147,6 +147,7 @@ hr {
   color: rgb(171, 214, 232, 0.5);
 }
 
-#forecast {
+#forecast,
+.selectionArea {
   margin: 30px;
 }
