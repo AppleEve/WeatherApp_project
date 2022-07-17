@@ -10,17 +10,14 @@ function showSelectedTemperature(response) {
   let currentWeather = Math.round(response.data.main.temp);
   let humidity = response.data.main.humidity;
   let wind = Math.round(response.data.wind.speed);
-  let responceWeatherDescription = response.data.weather[0].description;
+  let responceWeatherDescription = response.data.weather[0].icon;
   h1.innerHTML = `${selectedCity}, ${selectedCountry}`;
   currentTemperature.innerHTML = `${currentWeather}`;
   humidityValue.innerHTML = ` ${humidity}%`;
   windValue.innerHTML = ` ${wind} km/h`;
   celsiusTemperature = response.data.main.temp;
   weatherDescription.innerHTML = responceWeatherDescription;
-  weatherIcon.setAttribute(
-    "src",
-    `${weatherIcons[`${responceWeatherDescription}`].day}`
-  );
+  weatherIcon.setAttribute("src", `img/${responceWeatherDescription}.svg`);
   getForecast(response.data.coord);
 }
 
@@ -112,7 +109,9 @@ function displayForecast(response) {
             <div class="forecast-day">${formatForecastDate(
               forecastDay.dt
             )}</div>
-            <img class="forecast-images" src= "img/clear-day.svg"  />;
+            <img class="forecast-images" src= "img/${
+              forecastDay.weather[0].icon
+            }.svg"  />
             <div class="forecast-temperatures">
               <span class="forecast-temperature-max">${Math.round(
                 forecastDay.temp.max
@@ -125,37 +124,10 @@ function displayForecast(response) {
           </div>`;
     }
   });
+
   forecastHTML = forecastHTML + "</div>";
   dailyForecast.innerHTML = forecastHTML;
 }
-
-let weatherIcons = {
-  "clear sky": { day: "img/clear-day.svg", night: "img/clear-night.svg" },
-  "few clouds": {
-    day: "img/partly-cloudy-day.svg",
-    night: "img/partly-cloudy-night.svg",
-  },
-  "scattered clouds": { day: "img/cloudy.svg", night: "img/cloudy.svg" },
-  "broken clouds": {
-    day: "img/overcast-day.svg",
-    night: "img/overcast-night.svg",
-  },
-  "overcast clouds": {
-    day: "img/overcast-day.svg",
-    night: "img/overcast-night.svg",
-  },
-  "shower rain": { day: "img/clear-day.svg", night: "img/clear-night.svg" },
-  rain: {
-    day: "img/partly-cloudy-rain-day.svg",
-    night: "img/partly-cloudy-rain-night.svg",
-  },
-  thunderstorm: {
-    day: "img/thunderstorms.svg",
-    night: "img/thunderstorms.svg",
-  },
-  snow: { day: "img/snow.svg", night: "img/partly-cloudy-snow-night.svg" },
-  mist: { day: "img/fog.svg", night: "img/fog.svg" },
-};
 
 let now = new Date();
 let minutes = now.getMinutes();
