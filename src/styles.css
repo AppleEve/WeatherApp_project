@@ -2,16 +2,9 @@ body {
   font-family: "Montserrat", sans-serif;
   margin-top: 30px;
 }
-.container {
-  max-width: 75%;
-  background-color: rgb(79, 129, 199);
-  padding: 30px;
-  border-radius: 10px;
-  border: 2px inset;
-  border-color: rgb(252, 250, 250);
-  box-shadow: 10px 5px 5px 10px rgb(46, 67, 97, 0.2);
+button {
+  width: 80%;
 }
-
 h1 {
   font-weight: 600;
   color: rgb(240, 215, 140);
@@ -20,55 +13,8 @@ h1 {
 h2 {
   color: rgb(171, 214, 232);
 }
-
-#big-nbr {
-  font-size: 90px;
-}
-#fahrenheit-scale,
-#celsius-scale,
-#main-dash {
-  position: relative;
-  top: -42px;
-}
-
-#fahrenheit-scale:hover,
-#celsius-scale:hover {
-  font-weight: 600;
-  cursor: pointer;
-  color: rgb(252, 250, 250);
-}
-
-.non-active-scale {
-  color: rgb(171, 214, 232, 0.3);
-  text-decoration: none;
-}
-.active-scale {
-  color: rgb(171, 214, 232);
-  text-decoration: none;
-  cursor: default;
-}
-.dash {
-  color: rgb(171, 214, 232, 0.3);
-  font-weight: 600;
-}
-.value {
-  color: rgb(171, 214, 232);
-}
-.main-image {
-  background-size: auto;
-}
-.image {
-  text-align: center;
-  padding-right: 12%;
-}
-.text {
-  padding: 8px 20px;
-  display: block;
-  border-radius: 5px;
-  font-size: 13px;
-  width: 100%;
-  background-color: white;
-  border-color: rgba(56, 92, 142);
+hr {
+  color: rgb(168, 218, 220);
 }
 button,
 .submit {
@@ -81,12 +27,6 @@ button,
   background-color: rgba(56, 92, 142);
   border-color: rgba(56, 92, 142);
 }
-.submit {
-  width: 65%;
-}
-button {
-  width: 80%;
-}
 button:hover,
 .submit:hover {
   color: white;
@@ -94,42 +34,28 @@ button:hover,
   background-color: rgba(56, 92, 142);
   border-color: rgba(56, 92, 142);
 }
-hr {
-  color: rgb(168, 218, 220);
-}
-#label {
+
+.active-scale {
   color: rgb(171, 214, 232);
-  font-size: 11px;
-  margin-top: 10px;
+  text-decoration: none;
+  cursor: default;
 }
-
-.parameter {
-  font-weight: 600;
-  color: white;
+.container {
+  max-width: 75%;
+  background-color: rgb(79, 129, 199);
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px inset;
+  border-color: rgb(252, 250, 250);
+  box-shadow: 10px 5px 5px 10px rgb(46, 67, 97, 0.2);
 }
-
-.open-source {
-  font-size: 10px;
-  color: rgb(252, 250, 250);
-}
-
-#weather-description {
-  text-transform: capitalize;
-}
-
 .current-date {
   margin-bottom: 40px;
   font-size: 12px;
 }
-
-.weather-properties {
-  position: relative;
-  top: 16px;
-  font-size: 18px;
-}
-
-.day-one {
-  text-align: center;
+.dash {
+  color: rgb(171, 214, 232, 0.3);
+  font-weight: 600;
 }
 .forecast-day {
   color: rgb(240, 215, 140);
@@ -147,7 +73,71 @@ hr {
   color: rgb(171, 214, 232, 0.5);
 }
 
+.non-active-scale {
+  color: rgb(171, 214, 232, 0.3);
+  text-decoration: none;
+}
+.image {
+  text-align: center;
+  padding-right: 12%;
+}
+.main-image {
+  background-size: auto;
+}
+.open-source {
+  font-size: 10px;
+  color: rgb(252, 250, 250);
+}
+.parameter {
+  font-weight: 600;
+  color: white;
+}
+.submit {
+  width: 65%;
+}
+.text {
+  padding: 8px 20px;
+  display: block;
+  border-radius: 5px;
+  font-size: 13px;
+  width: 100%;
+  background-color: white;
+  border-color: rgba(56, 92, 142);
+}
+.weather-properties {
+  position: relative;
+  top: 16px;
+  font-size: 18px;
+}
+.value {
+  color: rgb(171, 214, 232);
+}
+
+#big-nbr {
+  font-size: 90px;
+}
+
+#celsius-scale,
+#fahrenheit-scale,
+#main-dash {
+  position: relative;
+  top: -42px;
+}
+#fahrenheit-scale:hover {
+  font-weight: 600;
+  cursor: pointer;
+  color: rgb(252, 250, 250);
+}
 #forecast,
 .selectionArea {
   margin: 30px;
+}
+#label {
+  color: rgb(171, 214, 232);
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+#weather-description {
+  text-transform: capitalize;
 }

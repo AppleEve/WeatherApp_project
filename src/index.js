@@ -63,18 +63,6 @@ function convertCtoF(event) {
   );
 }
 
-function convertFtoC(event) {
-  event.preventDefault();
-  let temperatureInC = document.querySelector("#big-nbr");
-  let fahrenheitScale = document.querySelector("#fahrenheit-scale");
-  let celsiusScale = document.querySelector("#celsius-scale");
-  temperatureInC.innerHTML = Math.round(celsiusTemperature);
-  fahrenheitScale.classList.remove("active-scale");
-  celsiusScale.classList.remove("non-active-scale");
-  fahrenheitScale.classList.add("non-active-scale");
-  celsiusScale.classList.add("active-scale");
-}
-
 function formatForecastDate(dt) {
   let date = new Date(dt * 1000);
   let days = [
@@ -175,8 +163,5 @@ let fButton = document.querySelector("#fahrenheit-scale");
 fButton.addEventListener("click", convertCtoF);
 
 let celsiusTemperature = null;
-
-let cButton = document.querySelector("#celsius-scale");
-cButton.addEventListener("click", convertFtoC);
 
 setDefaultLocation();
