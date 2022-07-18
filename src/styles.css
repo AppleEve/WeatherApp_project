@@ -1,6 +1,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   margin-top: 30px;
+  margin-bottom: 30px;
   background-color: rgba(56, 92, 142, 0.1);
 }
 button {
