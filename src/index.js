@@ -10,14 +10,15 @@ function showSelectedTemperature(response) {
   let currentWeather = Math.round(response.data.main.temp);
   let humidity = response.data.main.humidity;
   let wind = Math.round(response.data.wind.speed);
-  let responceWeatherDescription = response.data.weather[0].icon;
+  let responceWeatherIcon = response.data.weather[0].icon;
+  let responceWeatherDescription = response.data.weather[0].description;
   h1.innerHTML = `${selectedCity}, ${selectedCountry}`;
   currentTemperature.innerHTML = `${currentWeather}`;
   humidityValue.innerHTML = ` ${humidity}%`;
   windValue.innerHTML = ` ${wind} km/h`;
   celsiusTemperature = response.data.main.temp;
   weatherDescription.innerHTML = responceWeatherDescription;
-  weatherIcon.setAttribute("src", `img/${responceWeatherDescription}.svg`);
+  weatherIcon.setAttribute("src", `img/${responceWeatherIcon}.svg`);
   getForecast(response.data.coord);
 }
 
