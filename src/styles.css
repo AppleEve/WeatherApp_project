@@ -2,8 +2,8 @@ body {
   font-family: "Montserrat", sans-serif;
   margin-top: 30px;
   margin-bottom: 30px;
-  background-image: url(../img/background-img.jpg);
-  width: 100%;
+  background-image: url("../img/background-img.jpg");
+  background-size: cover;
 }
 h1 {
   font-weight: 600;
