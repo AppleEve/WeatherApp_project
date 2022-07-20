@@ -2,15 +2,13 @@ body {
   font-family: "Montserrat", sans-serif;
   margin-top: 30px;
   margin-bottom: 30px;
-  background-color: rgba(56, 92, 142, 0.1);
-}
-button {
-  width: 80%;
+  background-image: url(../img/background-img.jpg);
+  width: 100%;
 }
 h1 {
   font-weight: 600;
   color: rgb(240, 215, 140);
-  font-size: 60px;
+  font-size: 50px;
 }
 h2 {
   color: rgb(171, 214, 232);
@@ -28,6 +26,7 @@ button,
   font-size: 12px;
   background-color: rgba(56, 92, 142);
   border-color: rgba(56, 92, 142);
+  box-shadow: 0.5px 10px 20px rgb(46, 67, 97, 0.4);
 }
 button:hover,
 .submit:hover {
@@ -43,13 +42,13 @@ button:hover,
   cursor: default;
 }
 .container {
-  max-width: 75%;
+  max-width: 50%;
   background-color: rgb(79, 129, 199);
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 7px;
   border: 2px inset;
-  border-color: rgb(252, 250, 250);
-  box-shadow: 10px 5px 5px 10px rgb(46, 67, 97, 0.2);
+
+  box-shadow: 5px 10px 20px rgb(46, 67, 97, 0.4);
 }
 .current-date {
   margin-bottom: 40px;
@@ -63,9 +62,7 @@ button:hover,
   color: rgb(240, 215, 140);
 }
 .forecast-images {
-  max-width: 40%;
-  position: relative;
-  left: 6px;
+  max-width: 80%;
 }
 .forecast-temperature-max,
 .forecast-dash {
@@ -95,7 +92,7 @@ button:hover,
   color: white;
 }
 .submit {
-  width: 65%;
+  width: 70%;
 }
 .text {
   padding: 8px 20px;
@@ -105,11 +102,12 @@ button:hover,
   width: 100%;
   background-color: white;
   border-color: rgba(56, 92, 142);
+  box-shadow: 5px 10px 20px rgb(46, 67, 97, 0.4);
 }
 .weather-properties {
   position: relative;
   top: 16px;
-  font-size: 18px;
+  font-size: 15px;
 }
 .value {
   color: rgb(171, 214, 232);
@@ -130,14 +128,24 @@ button:hover,
   cursor: pointer;
   color: rgb(252, 250, 250);
 }
-#forecast,
+
 .selectionArea {
   margin: 30px;
+  text-align: center;
+}
+
+#forecast {
+  background-color: rgb(171, 214, 232, 0.3);
+  border-radius: 5px;
+  padding: 20px 30px;
+  text-align: center;
+  box-shadow: 5px 10px 20px rgb(46, 67, 97, 0.4);
 }
 #label {
   color: rgb(171, 214, 232);
   font-size: 11px;
   margin-top: 10px;
+  text-align: left;
 }
 
 #weather-description {

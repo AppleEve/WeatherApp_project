@@ -57,13 +57,6 @@ function getWeatherForCurrentLocation() {
   navigator.geolocation.getCurrentPosition(setCurrentLocation);
 }
 
-function convertCtoF(event) {
-  event.preventDefault();
-  alert(
-    "Unfortunatelly our App does not provide the possibility to change the scale to Fahrenheit just yet 🌡️. We are working on it! 🤔"
-  );
-}
-
 function formatForecastDate(dt) {
   let date = new Date(dt * 1000);
   let days = [
@@ -100,10 +93,10 @@ function displayForecast(response) {
               <span class="forecast-temperature-max" id="temp-max">${Math.round(
                 forecastDay.temp.max
               )}&#176;C</span
-              ><span class="forecast-dash"> &#124; </span>
-              <span class="forecast-temperature-min" id="temp-min">${Math.round(
+              >
+              <div class="forecast-temperature-min" id="temp-min">${Math.round(
                 forecastDay.temp.min
-              )}&#176;C</span>
+              )}&#176;C</div>
             </div>
           </div>`;
     }
@@ -159,9 +152,6 @@ form.addEventListener("submit", setLocation);
 
 let checkWeatherButton = document.querySelector("button");
 checkWeatherButton.addEventListener("click", getWeatherForCurrentLocation);
-
-let fButton = document.querySelector("#fahrenheit-scale");
-fButton.addEventListener("click", convertCtoF);
 
 let celsiusTemperature = null;
 
