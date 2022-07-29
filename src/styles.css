@@ -16,22 +16,19 @@ h2 {
 hr {
   color: rgb(168, 218, 220);
 }
+
 button,
 .submit {
-  padding: 8px 10px;
-  display: block;
-  border-radius: 5px;
-  color: white;
-  transition: all 200ms ease;
-  font-size: 11px;
   background-color: rgba(56, 92, 142);
-  border-color: rgba(56, 92, 142);
-  box-shadow: 0.5px 10px 20px rgb(46, 67, 97, 0.4);
+  border-radius: 50px;
+  color: white;
+  border: thin white;
+  padding: 10px 15px;
 }
 button:hover,
 .submit:hover {
   color: white;
-  font-size: 12px;
+  font-size: 18px;
   background-color: rgba(56, 92, 142);
   border-color: rgba(56, 92, 142);
 }
