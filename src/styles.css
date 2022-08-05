@@ -5,6 +5,38 @@ body {
   background-image: url("../img/background-img.jpg");
   background-size: cover;
 }
+.container {
+  max-width: 700px;
+  background-color: rgb(79, 129, 199, 0.8);
+  padding: 30px;
+  border-radius: 7px;
+  border: 2px inset;
+  box-shadow: 5px 5px 20px rgb(79, 129, 199);
+}
+button,
+.submit {
+  background-color: rgba(56, 92, 142);
+  color: white;
+  border: thin white;
+}
+
+button {
+  border-radius: 50%;
+  position: relative;
+  top: -3px;
+  padding: 10px 15px;
+}
+.submit {
+  padding: 10px 0px;
+  border-radius: 50%;
+  font-size: 22px;
+}
+button:hover,
+.submit:hover {
+  color: white;
+  background-color: rgba(56, 92, 142);
+  border-color: rgba(56, 92, 142);
+}
 h1 {
   font-weight: 600;
   color: rgb(240, 215, 140);
@@ -17,36 +49,12 @@ hr {
   color: rgb(168, 218, 220);
 }
 
-button,
-.submit {
-  background-color: rgba(56, 92, 142);
-  border-radius: 50px;
-  color: white;
-  border: thin white;
-  padding: 10px 15px;
-}
-button:hover,
-.submit:hover {
-  color: white;
-  font-size: 18px;
-  background-color: rgba(56, 92, 142);
-  border-color: rgba(56, 92, 142);
-}
-
 .active-scale {
   color: rgb(171, 214, 232);
   text-decoration: none;
   cursor: default;
 }
-.container {
-  max-width: 50%;
-  background-color: rgb(79, 129, 199, 0.9);
-  padding: 30px;
-  border-radius: 7px;
-  border: 2px inset;
 
-  box-shadow: 5px 10px 20px rgb(46, 67, 97, 0.4);
-}
 .current-date {
   margin-bottom: 20px;
   font-size: 12px;
@@ -127,7 +135,6 @@ button:hover,
 }
 
 .selectionArea {
-  margin: 30px;
   text-align: center;
 }
 

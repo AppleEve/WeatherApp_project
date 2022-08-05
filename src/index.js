@@ -150,7 +150,7 @@ currentDateTime.innerHTML = `  ${day}, ${date} ${month} ${year},    ${hours}:${m
 let form = document.querySelector("form");
 form.addEventListener("submit", setLocation);
 
-let checkWeatherButton = document.querySelector("button");
+let checkWeatherButton = document.querySelector("#location-button");
 checkWeatherButton.addEventListener("click", getWeatherForCurrentLocation);
 
 let celsiusTemperature = null;

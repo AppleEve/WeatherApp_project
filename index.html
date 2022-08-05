@@ -27,16 +27,42 @@
   <body>
    
     <div class="container">
+    <div class ="selectionArea">
+    <form>
+      <div class="row">
+        <div class="col -9">
+          <input
+            class="text"
+            type="text"
+            id="text"
+            placeholder="Type the name of the city"
+            autocomplete="off"
+            autofocus="on"
+          />
+        </div>
+        <div class="col-2">
+          <input class="submit" type="submit" value="🔍"/>
+        </div>
+        <div class="col-1">
+          <button id="location-button"><i class="fa-solid fa-magnifying-glass-location"></i></button>
+        </div>
+      </div>
+    </form>
+    <p id="label">
+      You can select a city to see its current weather or check weather for your
+      current location.
+    </p></div>
+    <hr />
       <h1></h1>
       <div class="col-12 current-date">
         <span class="parameter">Weather for:</span
         ><span class="value" id="current-date-time"> 05/07/2022 15:21</span>
       </div>
       <div class="row">
-        <div class="col-3 main-image">
+        <div class="col-sm-3 main-image">
           <img id="main-image" src="" />
         </div>
-        <div class="col-3">
+        <div class="col-sm-3">
           <h2>
             <span id="big-nbr"></span
             ><span class="active-scale" id="celsius-scale">&#176;C</span>
@@ -44,7 +70,7 @@
           </h2>
         </div>
 
-        <div class="col-4">
+        <div class="col-sm-4">
           <p class="weather-properties">
             <span class="parameter">Weather: </span
             ><span class="value" id="weather-description"></span>
@@ -62,33 +88,7 @@
       </div>
       
 
-    <hr />
-    <div class ="selectionArea">
-    <form>
-      <div class="row">
-        <div class="col -8">
-          <input
-            class="text"
-            type="text"
-            id="text"
-            placeholder="Type the name of the city"
-            autocomplete="off"
-            autofocus="on"
-          />
-        </div>
-        <div class="col-2">
-          <button class="submit" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> 
-        </div>
-        <div class="col-2">
-          <button><i class="fa-solid fa-magnifying-glass-location"></i></button>
-        </div>
-      </div>
-    </form>
-    <p id="label">
-      You can select a city to see its current weather or check weather for your
-      current location.
-    </p></div>
-    <hr />
+
 
     <div class="open-source">
       <a
