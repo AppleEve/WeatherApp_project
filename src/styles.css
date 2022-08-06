@@ -32,6 +32,10 @@ button:hover,
   color: rgba(56, 92, 142);
   background-color: rgb(130, 153, 185);
 }
+button {
+  padding: 5px 9px;
+  color: rgb(171, 214, 232);
+}
 h1 {
   font-weight: 600;
   color: rgb(240, 215, 140);
@@ -202,8 +206,11 @@ hr {
 @media (max-width: 300px) {
   button,
   .button {
-    font-size: 5;
+    font-size: 4;
     padding: 1px 2px;
+  }
+  button {
+    padding: 1px 5px;
   }
   h1 {
     font-size: 20px;
