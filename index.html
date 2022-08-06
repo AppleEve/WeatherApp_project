@@ -30,7 +30,17 @@
     <div class ="selectionArea">
     <form>
       <div class="row">
-        <div class="col -9">
+        <div class="col -9 d-none d-md-block">
+          <input
+            class="text"
+            type="text"
+            id="text"
+            placeholder="Type the name of the city"
+            autocomplete="off"
+            autofocus="on"
+          />
+        </div>
+        <div class="col -6 d-block d-md-none">
           <input
             class="text"
             type="text"
@@ -41,10 +51,10 @@
           />
         </div>
         <div class="col-2">
-          <input class="submit" type="submit" value="🔍"/>
+          <input class="button" type="submit" value="🔎"/>
         </div>
         <div class="col-1">
-          <button id="location-button"><i class="fa-solid fa-magnifying-glass-location"></i></button>
+          <button id="location-button">🗺️</button>
         </div>
       </div>
     </form>
@@ -59,18 +69,16 @@
         ><span class="value" id="current-date-time"> 05/07/2022 15:21</span>
       </div>
       <div class="row">
-        <div class="col-sm-3 main-image">
+        <div class="col-5 main-image">
           <img id="main-image" src="" />
         </div>
-        <div class="col-sm-3">
+        <div class="col-2">
           <h2>
             <span id="big-nbr"></span
             ><span class="active-scale" id="celsius-scale">&#176;C</span>
-            
           </h2>
         </div>
-
-        <div class="col-sm-4">
+        <div class="col-xs-5">
           <p class="weather-properties">
             <span class="parameter">Weather: </span
             ><span class="value" id="weather-description"></span>
@@ -89,7 +97,7 @@
       
 
 
-
+<br />
     <div class="open-source">
       <a
         class="open-source"

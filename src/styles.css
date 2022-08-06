@@ -2,11 +2,15 @@ body {
   font-family: "Montserrat", sans-serif;
   margin-top: 30px;
   margin-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
   background-image: url("../img/background-img.jpg");
   background-size: cover;
+  background-attachment: fixed;
 }
 .container {
-  max-width: 700px;
+  max-width: 800px;
+  margin: 0 auto;
   background-color: rgb(79, 129, 199, 0.8);
   padding: 30px;
   border-radius: 7px;
@@ -14,28 +18,19 @@ body {
   box-shadow: 5px 5px 20px rgb(79, 129, 199);
 }
 button,
-.submit {
+.button {
   background-color: rgba(56, 92, 142);
-  color: white;
   border: thin white;
-}
-
-button {
-  border-radius: 50%;
-  position: relative;
-  top: -3px;
-  padding: 10px 15px;
-}
-.submit {
-  padding: 10px 0px;
   border-radius: 50%;
   font-size: 22px;
+  max-width: 50px;
+  padding: 5px 7px;
 }
+
 button:hover,
-.submit:hover {
-  color: white;
-  background-color: rgba(56, 92, 142);
-  border-color: rgba(56, 92, 142);
+.button:hover {
+  color: rgba(56, 92, 142);
+  background-color: rgb(130, 153, 185);
 }
 h1 {
   font-weight: 600;
@@ -87,6 +82,7 @@ hr {
 }
 .main-image {
   background-size: auto;
+  max-width: 200px;
 }
 .open-source {
   font-size: 10px;
@@ -112,6 +108,7 @@ hr {
 .weather-properties {
   position: relative;
   top: 15px;
+  left: 80px;
   font-size: 16px;
 }
 .value {
@@ -160,4 +157,83 @@ hr {
 
 .row {
   margin: 0px;
+}
+
+@media (max-width: 800px) {
+  button,
+  .button {
+    font-size: 15px;
+    max-width: 40px;
+    padding: 5px 7px;
+  }
+
+  .main-image {
+    max-width: 200px;
+  }
+
+  #big-nbr {
+    font-size: 30px;
+    position: relative;
+    top: 10px;
+    left: -10px;
+  }
+
+  #celsius-scale,
+  #main-dash {
+    font-size: 18px;
+    top: 3px;
+    left: -10px;
+  }
+
+  .weather-properties {
+    font-size: 10px;
+    left: 10px;
+  }
+
+  .daily-forecast {
+    margin-bottom: 20px;
+  }
+
+  .forecast-day {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 300px) {
+  button,
+  .button {
+    font-size: 5;
+    padding: 1px 2px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+
+  .current-date {
+    margin-bottom: 10px;
+    font-size: 9px;
+  }
+
+  #big-nbr {
+    font-size: 18px;
+    top: -1px;
+  }
+  #celsius-scale,
+  #main-dash {
+    position: relative;
+    top: -5px;
+    font-size: 12px;
+  }
+  .text,
+  #label,
+  .forecast-day,
+  #temp-min,
+  #temp-max {
+    font-size: 9px;
+  }
+
+  #forecast {
+    padding: 7px 0px;
+    margin: 3px;
+  }
 }

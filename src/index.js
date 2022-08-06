@@ -82,7 +82,24 @@ function displayForecast(response) {
     if (index < 7 && index > 0) {
       forecastHTML =
         forecastHTML +
-        `<div class="col-2">
+        `<div class="col-2 d-none d-md-block daily-forecast">
+            <div class="forecast-day">${formatForecastDate(
+              forecastDay.dt
+            )}</div>
+            <img class="forecast-images" src= "img/${
+              forecastDay.weather[0].icon
+            }.svg"  />
+            <div class="forecast-temperatures">
+              <span class="forecast-temperature-max" id="temp-max">${Math.round(
+                forecastDay.temp.max
+              )}&#176;C</span
+              >
+              <div class="forecast-temperature-min" id="temp-min">${Math.round(
+                forecastDay.temp.min
+              )}&#176;C</div>
+            </div>
+          </div>
+          <div class="col-4 d-block d-md-none daily-forecast">
             <div class="forecast-day">${formatForecastDate(
               forecastDay.dt
             )}</div>
