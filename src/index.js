@@ -82,7 +82,7 @@ function displayForecast(response) {
     if (index < 7 && index > 0) {
       forecastHTML =
         forecastHTML +
-        `<div class="col-2 d-none d-md-block daily-forecast">
+        `<div class="col-2 d-none d-lg-block daily-forecast">
             <div class="forecast-day">${formatForecastDate(
               forecastDay.dt
             )}</div>
@@ -99,7 +99,7 @@ function displayForecast(response) {
               )}&#176;C</div>
             </div>
           </div>
-          <div class="col-4 d-block d-md-none daily-forecast">
+          <div class="col-4 d-block d-lg-none daily-forecast">
             <div class="forecast-day">${formatForecastDate(
               forecastDay.dt
             )}</div>

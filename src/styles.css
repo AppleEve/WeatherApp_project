@@ -163,7 +163,7 @@ hr {
   margin: 0px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 912px) {
   button,
   .button {
     font-size: 15px;
